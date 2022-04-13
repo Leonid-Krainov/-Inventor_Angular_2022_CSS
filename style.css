@@ -1,0 +1,371 @@
+@charset "UTF-8";
+/* Normalizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*-------------------*/
+body {
+  font-family: "Playfair Display", serif;
+}
+
+.blackwhite_button {
+  background-color: #fff;
+  color: #000;
+}
+
+.bluewhite_button {
+  background-color: #101482;
+  color: #fff;
+}
+
+img {
+  background-color: lightblue;
+}
+
+div.img {
+  background-repeat: round;
+}
+
+.dropdown::after {
+  content: " ∨";
+  vertical-align: sub;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+header div {
+  background-image: url("https://picsum.photos/id/1053/3000/50");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+header div a {
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: 1vh 1vw;
+}
+nav div input {
+  padding: 1vh 1vw;
+  margin: 1vh 1vw;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+nav ul {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav ul li {
+  padding: 10px;
+}
+
+section.ourFeatures {
+  height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+section.ourFeatures div.intro {
+  background-color: darksalmon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.ourFeatures div.intro div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+}
+section.ourFeatures div.intro div a {
+  margin: 0.5vw;
+  padding: 0.5vw;
+  border: none;
+  border-radius: 5px;
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+section.ourFeatures div.img {
+  background-image: url("https://picsum.photos/1400/300");
+}
+
+section.discount {
+  margin-bottom: 8%;
+}
+section.discount div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  list-style: none;
+  position: relative;
+  border: solid 12px #fff;
+  background: #fff;
+  box-shadow: 0 0 15px 0 #555;
+  transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  top: 3vw;
+}
+section.discount div :hover {
+  top: 0;
+  opacity: 0.5;
+}
+section.discount div :nth-child(1) {
+  transform: rotate(10deg);
+}
+section.discount div :nth-child(2) {
+  transform: rotate(0deg);
+}
+section.discount div :nth-child(3) {
+  transform: rotate(-10deg);
+}
+section.discount div :nth-child(4) {
+  transform: rotate(20deg);
+}
+section.discount div div.product {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  justify-content: center;
+  align-items: center;
+}
+section.discount div div.product a {
+  margin: 1vw;
+}
+section.discount div :nth-of-type(1) img {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+section.discount div :nth-of-type(3) img {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+section.discount div :nth-of-type(4) img {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+section.ourBrands {
+  padding: 2vw;
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.ourBrands div.brandsLogo ul {
+  display: flex;
+  flex-direction: row;
+}
+section.ourBrands div.brandsLogo ul li {
+  margin: 0 1vw;
+  text-align: center;
+}
+
+section.feedbacks {
+  background-color: lightgreen;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.feedbacks ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+section.feedbacks ul li {
+  background-color: white;
+  margin: 1vw;
+  padding: 1vw;
+}
+section.feedbacks ul li h4::after {
+  content: " ★★★★☆";
+}
+
+section.articles {
+  background-color: lightgoldenrodyellow;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.articles :nth-child(odd) {
+  display: flex;
+  flex-direction: row;
+}
+section.articles :nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+section.articles div.article {
+  padding: 2vw;
+  align-items: center;
+}
+section.articles div.article div {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.articles div.article img {
+  padding: 0 2vw;
+}
+
+section.FAQ {
+  text-align: center;
+  padding: 3vw 5vw;
+}
+section.FAQ div.questions {
+  text-align: start;
+  padding: 2vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5vw;
+}
+
+section.introLink {
+  height: 150px;
+  background-color: lightcoral;
+  text-align: center;
+}
+section.introLink h1 {
+  padding: 30px;
+}
+section.introLink a {
+  padding: 10px;
+  border-radius: 5px;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+footer {
+  padding: 2vw 3vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 2fr;
+  grid-gap: 1vw;
+  justify-items: center;
+}
+footer h5 {
+  margin: 2vw 0;
+}
+footer img {
+  margin: 2vw 0;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 11px;
+  }
+
+  h2, a, li {
+    font-size: 10px;
+  }
+
+  h3 {
+    font-size: 9px;
+  }
+
+  h4 {
+    font-size: 8px;
+  }
+
+  h5 {
+    font-size: 7px;
+  }
+
+  h6 {
+    font-size: 6px;
+  }
+
+  section.ourFeatures div.intro div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.discount div {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-column-gap: 5%;
+  }
+
+  section.ourBrands div.brandsLogo ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
